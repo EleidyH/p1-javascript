@@ -42,5 +42,5 @@ function Divide() {
 }
 
 function SetResult(Result) {
-    Result.innerHTML = "Result: " + Result;
+    ResultH1.innerHTML = "Result: " + Result;
 }
