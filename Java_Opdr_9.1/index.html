@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Cookiewall</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <button onclick="showCookieModal()">Toon Cookiewall</button>
+
+  <div id="cookie-modal">
+    <label for="age-input">Wat is je leeftijd?</label>
+    <input type="number" id="age-input" />
+    <button onclick="checkAge()">Verifiëren</button>
+    <p id="error-message"></p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
