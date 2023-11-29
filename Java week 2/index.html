@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Winkelmandje</title>
+</head>
+<body>
+
+<script>
+  // Maak een array genaamd "winkelmandje" en plaats vijf producten erin
+  var winkelmandje = ["Bananen", "Whiskey", "Chips", "Bonen", "Aardappelen"];
+
+  // Functie om een product toe te voegen aan het winkelmandje
+  function addProduct() {
+    // Vraag de gebruiker om de naam van het product
+    var nieuwProduct = prompt("Voer het nieuwe product in:");
+
+    // Voeg het nieuwe product toe aan het winkelmandje
+    winkelmandje.push(nieuwProduct);
+
+    // Controleer of het vijfde product in het winkelmandje gelijk is aan "Drop"
+    if (winkelmandje[4] === "Drop") {
+      // Toon het aantal producten op het scherm
+      document.body.innerHTML += "Er zitten " + winkelmandje.length + " producten in uw winkelmandje.<br>";
+
+      // Toon de bijgewerkte lijst van producten op het scherm
+      document.body.innerHTML += "Uw producten zijn: " + winkelmandje.join(", ") + ".<br>";
+    } else {
+      // Toon een melding als het vijfde product geen "Drop" is
+      document.body.innerHTML += "U heeft geen Drop.<br>";
+    }
+
+    // Verwijder het eerste en tweede product uit het winkelmandje met de splice-functie
+    var verwijderdeProducten = winkelmandje.splice(0, 2);
+
+    // Toon de "oude" en nieuwe inhoud van het winkelmandje op het scherm
+    document.body.innerHTML += "<br>Oude winkelmandje: " + verwijderdeProducten.join(", ") + ".<br>";
+    document.body.innerHTML += "Nieuwe winkelmandje: " + winkelmandje.join(", ") + ".<br>";
+
+    // Sorteer alle producten in het winkelmandje op alfabetische volgorde
+    winkelmandje.sort();
+
+    // Toon de gesorteerde lijst van producten op het scherm
+    document.body.innerHTML += "<br>Gesorteerde winkelmandje: " + winkelmandje.join(", ") + ".<br>";
+  }
+</script>
+
+<!-- Voeg een button toe om een product toe te voegen -->
+<button onclick="addProduct()">Product toevoegen</button>
+
+</body>
+</html>
